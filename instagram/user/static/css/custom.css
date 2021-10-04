@@ -1,0 +1,5 @@
+.col-lg-5.d-none.d-lg-block.bg-register-image2 {
+    background: url("../img/register_image.jpg");
+    background-position: center;
+    background-size: cover;
+}
