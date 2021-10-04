@@ -1,1 +1,1 @@
-# DjangoInstagram
+# DjangoBasic
