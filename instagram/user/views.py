@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from .models import User
 
@@ -34,4 +34,11 @@ def register(request):
             )
 
             user.save()
+            return redirect('/user/login')
+            # return render(request, 'login.html')
         return render(request, 'register.html', res_data)
+
+
+def login(request):
+    if request.method == 'GET':
+        return render(request, 'login.html')
