@@ -11,5 +11,10 @@ class User(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.username
+
     class Meta:
         db_table = 'users'
+        verbose_name = '사용자'
+        verbose_name_plural = '사용자'
