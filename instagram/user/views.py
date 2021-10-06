@@ -63,7 +63,8 @@ def login(request):
                 return render(request, 'login.html', res_data)
 
             if bcrypt.checkpw(password.encode('utf-8'), user.password.encode('utf-8')):
-                print('정답')
+                request.session['user'] = user.id
+
                 return redirect('/user/home')
 
         return render(request, 'login.html', res_data)
